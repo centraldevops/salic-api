@@ -5,7 +5,7 @@ import sys
 sys.path.append('../..')
 from app import app
 from sql_connector import SQL_connector
-from sqlalchemy import create_engine, Column
+from sqlalchemy import create_engine, Column, event
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import func, distinct
 from flask import Flask
@@ -42,6 +42,8 @@ class MSSql_connector(SQL_connector):
 
         try:
             self.session = Session()
+            event.listen(Session, "after_transaction_create", self.session.execute('SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED'))
+            
             Log.info('Connection Openned')
         except:
             Log.info('Can\'t create database session')
