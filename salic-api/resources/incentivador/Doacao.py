@@ -80,11 +80,17 @@ class Doacao(ResourceBase):
      def get(self, incentivador_id):
 
         cgccpf = decrypt(incentivador_id)
+        
+        limit = app.config['LIMIT_PAGING']
 
         if request.args.get('limit') is not None:
             limit = int(request.args.get('limit'))
-        else:
-            limit = app.config['LIMIT_PAGING']
+            if limit > app.config['LIMIT_PAGING']:
+                results = {'message' : 'Max limit paging exceeded',
+                        'message_code' : 7
+                    }
+                return self.render(results, status_code = 405)
+            
 
         if request.args.get('offset') is not None:
             offset = int(request.args.get('offset'))
