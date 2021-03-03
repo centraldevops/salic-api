@@ -9,10 +9,10 @@ def build_link(document):
 
     if document['Anexado'] == '2':
         idPronac =  document['idPronac']
-        link_file = app.config['SALIC_BASE_URL']+'verprojetos/abrir-documentos-anexados?id=%d&tipo=2&idPronac=%d'%(doc_id, idPronac)
+        link_file = app.config['SALIC_BASE_URL']+'projetos/abrir-documentos-anexados?id=%d&tipo=2&idPronac=%d'%(doc_id, idPronac)
 
     elif document['Anexado'] == '5':
-        link_file = app.config['SALIC_BASE_URL']+'verprojetos/abrir?id=%d'%(doc_id)
+        link_file = app.config['SALIC_BASE_URL']+'projetos/abrir?id=%d'%(doc_id)
 
     else:
         link_file = ''
