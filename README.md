@@ -1,9 +1,9 @@
 # SALIC api [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/) [![Open Source Love](https://badges.frapsoft.com/os/gpl/gpl.svg?v=102)](http://www.gnu.org/licenses/gpl.html)
 
 
-API aberta para o sistema [SALIC](http://salic.cultura.gov.br/cidadao/consultar). Tem por objetivo expor os dados de projetos da lei Rouanet.
+API aberta para o sistema [SALIC](http://centraldevops.com/cidadao/consultar). Tem por objetivo expor os dados de projetos da lei Rouanet.
 
-A documentação da API pode ser acessada [aqui](http://api.salic.cultura.gov.br/doc/).
+A documentação da API pode ser acessada [aqui](http://api.centraldevops.com/doc/).
 
 O projeto ainda se encontra em **implantação**, sujeito ainda a muitas alterações, reformulações e atualizacões.
 
