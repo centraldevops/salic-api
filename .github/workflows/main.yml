@@ -1,0 +1,46 @@
+name: salicmain
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: dev
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+
+  deploy-dev:
+    runs-on: dev
+    environment: 
+      name: desenvolvimento
+      url: 'julioarruda.com'
+    needs: build
+    steps:
+      - name: executando script para levantar aplicação Desenvolvimento
+        run: |
+         /etc/init.d/salic start
+
+  deploy-hmg:
+    runs-on: hmg
+    environment: 
+      name: homologacao
+      url: 'julioarruda.com'
+    needs: deploy-dev
+    steps:
+      - name: executando script para levantar aplicação Homologação
+        run: |
+         /etc/init.d/salic start
+
+
+  deploy-prd:
+    runs-on: prd
+    environment: 
+      name: producao
+      url: 'julioarruda.com'
+    needs: deploy-hmg
+    steps:
+      - name: executando script para levantar aplicação Produção
+        run: |
+         /etc/init.d/salic start
+
