@@ -18,8 +18,7 @@ jobs:
     needs: build
     steps:
       - name: executando script para levantar aplicação Desenvolvimento
-        run: |
-         /etc/init.d/salic start
+        run: echo Hello, world!
 
   deploy-hmg:
     runs-on: hmg
@@ -29,8 +28,7 @@ jobs:
     needs: deploy-dev
     steps:
       - name: executando script para levantar aplicação Homologação
-        run: |
-         /etc/init.d/salic start
+        run: echo Hello, world!
 
 
   deploy-prd:
@@ -41,6 +39,5 @@ jobs:
     needs: deploy-hmg
     steps:
       - name: executando script para levantar aplicação Produção
-        run: |
-         /etc/init.d/salic start
+        run: echo Hello, world!
 
