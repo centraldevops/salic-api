@@ -5,7 +5,7 @@ API aberta para o sistema [SALIC](http://centraldevops.com/cidadao/consultar). T
 
 A documentação da API pode ser acessada [aqui](http://api.centraldevops.com/doc/).
 
-O projeto ainda se encontra em **implantação**, sujeito ainda a muitas alterações, reformulações e atualizacões.
+O projeto ainda se encontra em **desenvolvimento**, sujeito ainda a muitas alterações, reformulações e atualizacões.
 
 
 
