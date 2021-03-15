@@ -1,4 +1,4 @@
-name: salicmain
+name: salictestes
 on:
   push:
     branches: [ master ]
