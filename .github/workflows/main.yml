@@ -18,4 +18,5 @@ jobs:
         run: chmod 775 /opt/actions-runner/repositorio/salic-api/salic-api/install.sh
         
       - name: Execultando script... 
-        run: ./opt/actions-runner/repositorio/salic-api/salic-api/install.sh
+        run: /opt/actions-runner/repositorio/salic-api/salic-api/install.sh 
+              
