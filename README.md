@@ -1,4 +1,4 @@
-# SALIC api [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/) [![Open Source Love](https://badges.frapsoft.com/os/gpl/gpl.svg?v=102)](http://www.gnu.org/licenses/gpl.html)
+# SALIC api Divino [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/) [![Open Source Love](https://badges.frapsoft.com/os/gpl/gpl.svg?v=102)](http://www.gnu.org/licenses/gpl.html)
 
 
 API aberta para o sistema [SALIC](http://centraldevops.com/cidadao/consultar). Tem por objetivo expor os dados de projetos da lei Rouanet.
