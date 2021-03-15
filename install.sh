@@ -4,13 +4,13 @@ PID=$(pgrep -f /opt/salic/salic-api/run.py)
 PROJECT_PATH="`dirname \"$0\"`"
 
 
-echo "Syncing project..."
-cd $PROJECT_PATH
-git checkout install.sh
-git checkout master &> /dev/null
-git fetch &> /dev/null
-git pull origin master
-echo "Repository Updated"
+#echo "Syncing project..."
+#cd $PROJECT_PATH
+#git checkout install.sh
+#git checkout master &> /dev/null
+#git fetch &> /dev/null
+#git pull origin master
+#echo "Repository Updated"
 
 if [ $PID ]; then
 
@@ -22,7 +22,7 @@ fi
 echo "Installing SALIC API..."
 
 echo "Installing dependencies:"
-apt-get update && apt-get install python-dev python-pip freetds-dev libxml2-dev libxslt1-dev libz-dev
+yum update && yum install python-dev python-pip freetds-dev libxml2-dev libxslt1-dev libz-dev htop
 pip install -r salic-api/requirements.txt
 
 echo "Dependencies installed"
