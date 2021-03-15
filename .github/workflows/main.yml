@@ -1,4 +1,4 @@
-name: salictestes
+name: salictestesv1
 on: push
 jobs:
   build:
@@ -14,6 +14,8 @@ jobs:
       url: 'centraldevops.com'
      needs: build
      steps:
-      - name: executando script para levantar aplicação Desenvolvimento
-        run: echo Hello, world!
-
+      - name: Dando Permissão script install e execultando ... 
+        run: chmod 775 /opt/actions-runner/repositorio/salic-api/salic-api/install.sh
+        
+      - name: Execultando script... 
+        run: ./opt/actions-runner/repositorio/salic-api/salic-api/install.sh
