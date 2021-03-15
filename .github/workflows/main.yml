@@ -9,8 +9,8 @@ jobs:
   build:
     runs-on: dev2
     steps:
-      - name: Checkout para clonar codigo fonte
-        uses: actions/checkout@v2
+      - name: Git Checkout
+        uses: actions/checkout@v1
 
   deploy-dev:
      runs-on: dev2
