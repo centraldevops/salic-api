@@ -1,4 +1,4 @@
-name: salictestesv2
+name: salictestesv3
 on: push
 jobs:
   build:
