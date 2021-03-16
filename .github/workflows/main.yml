@@ -2,13 +2,13 @@ name: salictestesv1
 on: push
 jobs:
   build:
-    runs-on: dev2
+    runs-on: dev3
     steps:
       - name: Git Checkout
         uses: actions/checkout@v1
 
   deploy-dev:
-     runs-on: dev2
+     runs-on: dev3
      environment: 
       name: desenvolvimento
       url: 'centraldevops.com'
